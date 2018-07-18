@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ashwinshankar.batterypoolpartnerapp.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="483dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="14dp">
+
+        <Button
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:text="Empty Battery"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="68dp" />
+
+        <Button
+            android:id="@+id/full"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:text="Full Battery"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="183dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
