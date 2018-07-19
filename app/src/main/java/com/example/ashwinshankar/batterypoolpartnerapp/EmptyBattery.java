@@ -9,8 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -33,6 +36,8 @@ public class EmptyBattery extends AppCompatActivity {
     EditText mVehicleNo;
     Button mStart, mCancel;
     private DatabaseReference mDatabase;
+    private DatabaseReference mReservedBatteries;
+    Integer battery_count;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,8 +65,23 @@ public class EmptyBattery extends AppCompatActivity {
                     final String batteryIDout = mbatteryIDout.getText().toString();
                     final String VehicleNo = mVehicleNo.getText().toString();
                     final String Odometer = mOdometer.getText().toString();
-                    mDatabase.child("batterylocations").child("YS Traders").child(batteryIDin).child("status").setValue(1);
-                    mDatabase.child("batterylocations").child("YS Traders").child(batteryIDout).child("status").setValue(1);
+                    mDatabase.child("batterylocations").child("YS Traders").child(batteryIDin).child("status").setValue(2);
+                    mDatabase.child("batterylocations").child("YS Traders").child(batteryIDout).child("status").setValue(3);
+
+                    mReservedBatteries = mDatabase.child("batterylocations").child("YS Traders");
+                    mReservedBatteries.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            battery_count=dataSnapshot.child("count").getValue(Integer.class);
+                            battery_count--;
+                            dataSnapshot.getRef().child("count").setValue(battery_count);
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
                     Log.d("XXX", "Got: " + batteryIDin + " " + batteryIDout);
                     Call<Void> completeQuestionnaireCall = spreadsheetWebService.completeQuestionnaire(batteryIDin, batteryIDout,VehicleNo, Odometer);
                     completeQuestionnaireCall.enqueue(new Callback<Void>() {
