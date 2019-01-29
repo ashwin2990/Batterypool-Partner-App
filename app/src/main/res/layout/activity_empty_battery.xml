@@ -12,9 +12,9 @@
         android:layout_width="366dp"
         android:layout_height="477dp"
         android:orientation="vertical"
+        android:weightSum="1"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        android:weightSum="1">
+        tools:layout_editor_absoluteY="-14dp">
 
         <TextView
             android:id="@+id/textView2"
@@ -29,12 +29,11 @@
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="25dp" />
 
-        <EditText
-            android:id="@+id/editText13"
+        <Spinner
+            android:id="@+id/static_spinner_battery_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number" />
+            android:layout_weight="0.21" />
 
         <TextView
             android:id="@+id/textView3"
@@ -49,13 +48,11 @@
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="80dp" />
 
-        <EditText
-            android:id="@+id/editText14"
+        <Spinner
+            android:id="@+id/static_spinner_battery_out"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.04"
-            android:ems="10"
-            android:inputType="number" />
+            android:layout_weight="0.36" />
 
         <TextView
             android:id="@+id/textView4"
@@ -71,13 +68,11 @@
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="138dp" />
 
-        <EditText
-            android:id="@+id/editText15"
+        <Spinner
+            android:id="@+id/static_spinner_vehicle_no"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.04"
-            android:ems="10"
-            android:inputType="number" />
+            android:layout_weight="0.33" />
 
         <TextView
             android:id="@+id/textView"

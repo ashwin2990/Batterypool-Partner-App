@@ -1,3 +1,77 @@
 <resources>
     <string name="app_name">BatterypoolPartnerApp</string>
+
+    <string-array name="scooters">
+        <item>KA 03 AF 3272</item>
+        <item>KA 03 AF 3280</item>
+        <item>KA 03 AF 3282</item>
+        <item>KA 03 AF 3283</item>
+        <item>KA 03 AF 3286</item>
+        <item>KA 03 AF 3287</item>
+        <item>KA 03 AF 3293</item>
+        <item>KA 03 AF 6231</item>
+        <item>KA 03 AF 6232</item>
+        <item>KA 03 AF 6517</item>
+        <item>KA 03 AF 6524</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="batteryout">
+        <item>Batterypool-1</item>
+        <item>Batterypool-2</item>
+        <item>Batterypool-3</item>
+        <item>Batterypool-4</item>
+        <item>Batterypool-5</item>
+        <item>Batterypool-6</item>
+        <item>Batterypool-7</item>
+        <item>Batterypool-8</item>
+        <item>Zoomcar-1</item>
+        <item>Zoomcar-2</item>
+        <item>Zoomcar-3</item>
+        <item>Zoomcar-4</item>
+        <item>Zoomcar-5</item>
+        <item>Zoomcar-6</item>
+        <item>Zoomcar-7</item>
+        <item>Other</item>
+        <item>No Battery</item>
+    </string-array>
+
+    <string-array name="batteryin">
+        <item>Batterypool-1</item>
+        <item>Batterypool-2</item>
+        <item>Batterypool-3</item>
+        <item>Batterypool-4</item>
+        <item>Batterypool-5</item>
+        <item>Batterypool-6</item>
+        <item>Batterypool-7</item>
+        <item>Batterypool-8</item>
+        <item>Zoomcar-1</item>
+        <item>Zoomcar-2</item>
+        <item>Zoomcar-3</item>
+        <item>Zoomcar-4</item>
+        <item>Zoomcar-5</item>
+        <item>Zoomcar-6</item>
+        <item>Zoomcar-7</item>
+        <item>Other</item>
+        <item>No Battery</item>
+    </string-array>
+
+    <string-array name="batteryfull">
+        <item>Batterypool-1</item>
+        <item>Batterypool-2</item>
+        <item>Batterypool-3</item>
+        <item>Batterypool-4</item>
+        <item>Batterypool-5</item>
+        <item>Batterypool-6</item>
+        <item>Batterypool-7</item>
+        <item>Batterypool-8</item>
+        <item>Zoomcar-1</item>
+        <item>Zoomcar-2</item>
+        <item>Zoomcar-3</item>
+        <item>Zoomcar-4</item>
+        <item>Zoomcar-5</item>
+        <item>Zoomcar-6</item>
+        <item>Zoomcar-7</item>
+    </string-array>
+
 </resources>

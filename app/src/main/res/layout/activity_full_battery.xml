@@ -11,7 +11,8 @@
         android:layout_height="495dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        android:weightSum="1">
 
         <TextView
             android:id="@+id/textView5"
@@ -23,12 +24,13 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editText"
+        <Spinner
+            android:id="@+id/static_spinner_full_battery"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number" />
+            android:textSize="44sp"
+            android:layout_weight="0.08" />
+
 
         <Button
             android:id="@+id/button"
